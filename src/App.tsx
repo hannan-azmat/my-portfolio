@@ -15,10 +15,9 @@ const PROFILE = {
   email: 'hannanazmat@gmail.com',
   phone: '+92 312 1719008',
   location: 'Lahore, Pakistan',
-  // TODO: replace with your real profile URLs
-  linkedin: 'https://www.linkedin.com/',
-  medium: 'https://medium.com/',
-  github: 'https://github.com/',
+  linkedin: 'https://www.linkedin.com/in/muhammad-hannan-azmat/',
+  medium: 'https://medium.com/@hannan.azmat',
+  github: 'https://github.com/hannan-azmat',
 };
 
 const NAV = ['About', 'Skills', 'Experience', 'Projects', 'Leadership', 'Contact'];
