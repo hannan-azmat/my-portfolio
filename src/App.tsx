@@ -24,20 +24,20 @@ const NAV = ['About', 'Skills', 'Experience', 'Projects', 'Leadership', 'Contact
 
 const STATS = [
   { label: 'Years Experience', value: '6+' },
-  { label: 'Products Shipped', value: '12' },
+  { label: 'Products Shipped', value: '17' },
   { label: 'L1 → L3 Promotion', value: '3 mo' },
   { label: 'Arabic / English', value: 'RTL·LTR' },
 ];
 
-const TICKER = ['Next.js', 'React Native', 'TypeScript', 'Node.js / NestJS', 'PostgreSQL', 'Arabic RTL', 'Expo', 'Fastlane'];
+const TICKER = ['Next.js', 'React Native', 'Flutter', 'TypeScript', 'Node.js / NestJS', 'PostgreSQL', 'Arabic RTL', 'Expo', 'Fastlane'];
 
 const SKILL_GROUPS = [
   { title: 'Web', icon: Code2, color: 'text-cyan-400',
     items: ['Next.js', 'React.js', 'TypeScript', 'JavaScript (ES6+)', 'Tailwind CSS', 'Material UI', 'Ant Design', 'Styled Components', 'Performance optimisation'] },
   { title: 'Mobile', icon: Smartphone, color: 'text-purple-400',
-    items: ['React Native', 'Expo', 'React Navigation', 'iOS native (Swift)', 'Push notifications', 'Universal & deep linking', 'Bluetooth Low Energy', 'App Store / Google Play releases'] },
+    items: ['React Native', 'Flutter', 'Expo', 'React Navigation', 'iOS native (Swift)', 'Push notifications', 'Universal & deep linking', 'Bluetooth Low Energy', 'App Store / Google Play releases'] },
   { title: 'Back End & APIs', icon: Server, color: 'text-emerald-400',
-    items: ['Node.js', 'Express.js', 'NestJS', 'REST API design', 'JWT / OAuth 2.0', 'Webhooks', 'Socket.IO', 'Modular architecture'] },
+    items: ['Node.js', 'Express.js', 'NestJS', 'REST API design', 'JWT / OAuth 2.0', 'Webhooks', 'Socket.IO', 'FastAPI (Python)', '.NET', 'Modular architecture'] },
   { title: 'Databases', icon: Database, color: 'text-amber-400',
     items: ['PostgreSQL', 'MongoDB', 'TypeORM', 'Prisma', 'Schema design & migrations', 'Query tuning & indexing', 'Optimistic locking', 'RBAC'] },
   { title: 'State & Data', icon: Layers, color: 'text-pink-400',
@@ -45,7 +45,7 @@ const SKILL_GROUPS = [
   { title: 'Arabic & RTL', icon: Languages, color: 'text-cyan-300',
     items: ['RTL / LTR switching', 'i18n', 'Bilingual AR/EN interfaces', 'Bilingual document generation', 'Theme management'] },
   { title: 'Integrations', icon: Plug, color: 'text-blue-400',
-    items: ['Flutterwave', 'Stripe', 'Twilio SDK', 'Firebase', 'Google Maps & Geocoding', 'Airline / travel APIs', 'Social login'] },
+    items: ['Flutterwave', 'Stripe', 'Twilio SDK', 'Firebase', 'Google Maps & Geocoding', 'Airline / travel APIs', 'RevenueCat', 'AdMob', 'OpenAI API', 'Social login'] },
   { title: 'Quality & Release', icon: ShieldCheck, color: 'text-green-400',
     items: ['Jest', 'Sentry', 'SonarQube', 'ESLint + Husky', 'Snyk / OWASP', 'Fastlane CI/CD', 'Git · GitHub · GitLab · Bitbucket'] },
   { title: 'AI-Assisted Dev', icon: Sparkles, color: 'text-purple-300',
@@ -78,6 +78,55 @@ const EXPERIENCE = [
 
 const PROJECTS = [
   {
+    id: 13, title: 'AstroMatrix', kind: 'Astrology Platform', role: 'Development Lead',
+    platforms: ['Web', 'Mobile'],
+    description: 'Full-scale astrology platform — birth charts, transits, daily forecasts, synastry, tarot, an AI-narrated journal, real-time chat and subscriptions — shipped to iOS, Android and Web from a single Flutter codebase.',
+    highlights: [
+      'Led development and built most of it hands-on: the Flutter client, the backend, payments, real-time messaging and the release process across all three platforms.',
+      'Node.js / MongoDB API backed by a .NET astrology engine that powers the underlying chart calculations.',
+    ],
+    tags: ['Flutter', 'Node.js', 'MongoDB', '.NET', 'Real-time Chat', 'Subscriptions'],
+  },
+  {
+    id: 14, title: 'Chronicle', kind: 'History Reading App', role: 'Solo Build',
+    platforms: ['Mobile', 'Web'],
+    description: 'Each historical period is a book told chronologically — prologue, one chapter per year, aftermath — with a time ribbon showing the date of the paragraph on screen, plus maps, timelines and archival images.',
+    highlights: [
+      'Solo build of the Flutter app, a FastAPI + Postgres backend, Google sign-in, RevenueCat memberships, AdMob rewarded unlocks verified on the server, and a Flutter-web admin Studio.',
+      'Retrieval-grounded content pipeline: dates, coordinates and images come from Wikidata and Wikimedia Commons; an OpenAI model (GPT-5 nano, GPT-5 mini fallback) writes only the prose from fetched Wikipedia passages, and Python rejects any date or figure the sources don’t contain.',
+      'Chapters are narrated: recorded once on own hardware with an open-weight voice model, aligned word by word against the text, and published like any other file.',
+    ],
+    tags: ['Flutter', 'FastAPI', 'PostgreSQL', 'RevenueCat', 'AdMob', 'OpenAI', 'Wikidata'],
+  },
+  {
+    id: 15, title: 'TuneURL Radio', kind: 'Live Radio with Sound-QR Triggers', role: 'Android Engineer',
+    platforms: ['Mobile'],
+    description: 'Streams live internet radio while continuously analysing the audio for embedded “sound-QR” triggers (TuneURLs); a detected trigger surfaces an interactive notification and records the listener’s interest back to the TuneURL platform.',
+    highlights: [
+      'Rebuilt the existing iOS app natively for Android on the TuneURL SDK so both platforms behave identically — same stations, trigger sound, detection timing and thresholds.',
+    ],
+    tags: ['Android', 'TuneURL SDK', 'Audio Analysis', 'Streaming'],
+  },
+  {
+    id: 16, title: 'N-Vision Model Viewer', kind: 'iOS 3D Model Viewer', role: 'Solo Developer',
+    platforms: ['Mobile'],
+    description: 'Native iOS app for viewing, inspecting and interacting with glTF/GLB 3D models — the standard in medical, dental, architectural and product-design workflows.',
+    highlights: [
+      'Built solo as a client proof-of-concept, covering end-to-end iOS development from project setup to App Store submission readiness.',
+    ],
+    tags: ['iOS', 'Swift', 'glTF / GLB', '3D'],
+  },
+  {
+    id: 17, title: 'EndoStrator', kind: 'Drawing-Annotation Tool', role: 'Proof of Concept',
+    platforms: ['Mobile'],
+    description: 'Professional telestration tool for iOS/iPadOS — draw over live camera feeds, photos and videos, in a medical / sports-style workflow.',
+    highlights: [
+      'Drawing layer and background media share the same pan/zoom transform.',
+      'Drawings can be sent to an HDMI-connected external display in a “lines only” mode.',
+    ],
+    tags: ['iOS', 'iPadOS', 'Swift', 'Camera', 'External Display'],
+  },
+  {
     id: 1, title: 'SandSeekers', kind: 'Real Estate Admin Portal & CRM', role: 'Technical Lead',
     platforms: ['Web', 'Mobile'], url: 'https://admin.sandseekers.ae',
     description: 'Twelve-module Next.js admin platform with role-based access, plus an Expo / React Native CRM so agents can act on new leads from their phones.',
@@ -90,7 +139,7 @@ const PROJECTS = [
   },
   {
     id: 2, title: 'Trackivo', kind: 'Vehicle Tracking & Recovery Platform', role: 'Sole Full-Stack Developer',
-    platforms: ['Web'], url: 'https://tracker.trackivo.com',
+    platforms: ['Web'], url: 'https://trackivo.com/',
     description: 'Owned the whole product: PostgreSQL schema, NestJS APIs and four role-based portals for customers, admins, technicians and investigators.',
     highlights: [
       'Integrated Flutterwave end to end — checkout, webhooks, limits, verification — replacing manual reconciliation with self-service subscriptions.',
