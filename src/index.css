@@ -1,2 +1,6 @@
 @tailwind base;@tailwind components;@tailwind utilities;
-body{margin:0}
+:root{--paper:#f3f1ec;--ink:#141413;--accent:#2145f5;--line:#dcd9d1;--mute:#6b6a65}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Geist',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+section[id]{scroll-margin-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
